@@ -1,4 +1,4 @@
-
+function [pr, pr_star] = transmat()
 %parameters of transition matrix:
 durug=1.5;
 unempg=0.04;
@@ -45,6 +45,7 @@ pr(2,4) = pbb*pbb10;
 pr(3,4) = pgb*pgb00;
 pr(4,4) = pbb*pbb00;
 
+pr = pr';
 
 pr_tmp = pr^10000;
 for i=1:4
