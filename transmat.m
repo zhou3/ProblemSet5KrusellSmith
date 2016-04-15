@@ -1,11 +1,17 @@
 function [pr, pr_star] = transmat()
 %parameters of transition matrix:
 durug=1.5;
+%duration of unemployment in Good time
 unempg=0.04;
+%unempolyment rate good time
 durgd=8.0;
+%the average duration of good times are 8 quarters
 unempb=0.1;
+%unempolyment rate bad time
 durbd=8.0;
+%the average duration of bad times are 8 quarters
 durub=2.5;
+%duration of unemployment in Bad time
 %transition probabilities
 pgg00 = (durug-1)/durug;
 pbb00 = (durub-1)/durub;
@@ -53,5 +59,3 @@ for i=1:4
 end
 
 disp(['Stationary Distribution = [',num2str(pr_star),']'])
-
-
